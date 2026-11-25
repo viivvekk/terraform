@@ -1,7 +1,7 @@
 terraform {
-required_providers {
+  required_providers {
     local = {
-source  = "hashicorp/local"
+      source  = "hashicorp/local"
       version = "~> 2.5"
     }
   }
@@ -11,6 +11,5 @@ provider "local" {}
 
 resource "local_file" "example" {
   filename = "${path.module}/hello.txt"
-content  = "Hello from Terraform CI/CD!"
+  content  = "Hello from Terraform CI/CD!"
 }
-
